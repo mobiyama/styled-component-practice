@@ -34,7 +34,7 @@ const Component = ({
 );
 
 const StyledComponent = styled(Component)`
-  font-size: 16px;
+  font-size: 1.6rem;
   display: block;
   color: white;
   ${(props) => {

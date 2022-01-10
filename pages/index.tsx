@@ -1,10 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router'
 import { Button } from '../components/atom/Button';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,8 +17,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Button color="red" onClick={() => alert('Test')}>
-          Test Styled
+        <Button color="red" onClick={() => router.push('/profiles')}>
+          Profiles
         </Button>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
